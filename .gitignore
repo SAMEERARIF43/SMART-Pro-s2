@@ -1,0 +1,42 @@
+# Compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.pdb
+*.ilk
+
+# Build folders
+build/
+bin/
+Debug/
+Release/
+x64/
+x86/
+
+# IDE / editor
+.vs/
+.vscode/
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+.idea/
+*.cbp
+*.layout
+*.depend
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Secrets (never commit real ones)
+.env
+*.pem
+*.key

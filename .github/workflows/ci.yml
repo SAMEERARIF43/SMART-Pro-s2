@@ -1,0 +1,32 @@
+name: Repository Quality Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-repository:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify required files
+        shell: bash
+        run: |
+          test -f README.md
+          test -f .gitignore
+          test -f CONTRIBUTING.md
+          test -f docs/assignment.md
+
+      - name: Compile the project
+        shell: bash
+        run: g++ -std=c++17 -Wall -o metro_system main.cpp
+
+      - name: Show latest commits
+        run: git log --oneline -5
