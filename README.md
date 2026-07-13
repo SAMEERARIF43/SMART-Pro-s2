@@ -68,3 +68,4 @@ See `docs/assignment.md` for the specific checklist used during this assignment.
 ## License
 
 Personal academic project — for learning purposes.
+Maintained by: Sameer (A)
