@@ -234,7 +234,8 @@ static void showRawalpindiMenu()
     cout << "2. Send Bus to the Maintainence" << endl;
     cout << "3. Emergency Alert Call Emergency Bus" << endl;
     cout << "4. Calculate Fare" << endl;
-    cout << "5. Back to main menu" << endl;
+    cout << "5. Search Bus by ID" << endl;
+    cout << "6. Back to main menu" << endl;
     cout << "Enter your choice: ";
 }
 
@@ -376,13 +377,31 @@ static void runRawalpindiMetro()
         }
         else if (choice == 5)
         {
+            string searchId;
+            cout << "Enter the Bus ID to search: ";
+            cin.ignore();
+            getline(cin, searchId);
+            bool found = false;
+            for (int i = 0; i < 10; i++)
+            {
+                Bus *b = static_cast<Bus *>(RawalpindiMetroFleet[i]);
+                if (b && b->vechicleId == searchId)
+                {
+                    b->display();
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                cout << "Bus ID not found." << endl;
+            }
+        }
+        else if (choice == 6)
+        {
             cout << "Returning to combined metro menu." << endl;
         }
-        else
-        {
-            cout << "Invalid Input" << endl;
-        }
-    } while (choice != 5);
+    } while (choice != 6);
 }
 
 static void runInterCityTripBooking()
