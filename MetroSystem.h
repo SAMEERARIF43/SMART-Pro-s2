@@ -72,9 +72,8 @@ public:
         }
     }
 
-    void display() const override {
+ void display() const override {
         for (int i = 0; i < stopcount; i++) {
-            cout << stop[i] << endl;
             cout << i + 1 << ". " << stop[i] << " | Fare: Rs " << farePerstop[i] << endl;
         }
     }
