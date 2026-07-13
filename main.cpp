@@ -375,7 +375,7 @@ static void runRawalpindiMetro()
                 cout << "Invalid Choice" << endl;
             }
         }
-       else if (choice == 5)
+        else if (choice == 5)
         {
             string searchId;
             cout << "Enter the Bus ID to search: ";
@@ -400,7 +400,8 @@ static void runRawalpindiMetro()
         else if (choice == 6)
         {
             cout << "Returning to combined metro menu." << endl;
-        } while (choice != 6);    
+        }
+    } while (choice != 6);
 }
 
 static void runInterCityTripBooking()
