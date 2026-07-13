@@ -464,15 +464,12 @@ static void runAnalyticsDashboard()
     cout << " - Total Active Drivers: 12" << endl;
 
     cout << "\n[Rawalpindi Metro Bus System]" << endl;
-    int rwpActive = 0, rwpCapacity = 0;
+    int rwpActive = 0;
     for (int i = 0; i < 10; i++)
     {
-        if (RawalpindiMetroFleet[i])
-        {
-            rwpActive++;
-            rwpCapacity += RawalpindiMetroFleet[i]->capacity;
-        }
+        if (RawalpindiMetroFleet[i]) rwpActive++;
     }
+    int rwpCapacity = getTotalFleetCapacity(RawalpindiMetroFleet, 10);
     cout << " - Total Active Buses: " << rwpActive << endl;
     cout << " - Total Passenger Capacity: " << rwpCapacity << endl;
     cout << " - Emergency Vehicles on Standby: 3" << endl;
