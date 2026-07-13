@@ -400,7 +400,7 @@ static void runRawalpindiMetro()
         else if (choice == 6)
         {
             cout << "Returning to combined metro menu." << endl;
-        }
+        } while (choice != 6);    
 }
 
 static void runInterCityTripBooking()
