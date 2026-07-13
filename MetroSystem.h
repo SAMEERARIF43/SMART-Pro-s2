@@ -331,8 +331,16 @@ public:
         }
     }
 
-    void calculatefare(int start, int end) {
+   void calculatefare(int start, int end) {
+        if (start < 1 || start > 9 || end < 1 || end > 9) {
+            cout << "Invalid stop number. Please enter a stop between 1 and 9."<< endl;
+            return;
+        }
         int distance = end - start;
+        if (distance <= 0) {
+            cout << "End stop must be after start stop." << endl;
+            return;
+        }
         if (distance <= 2) {
             money -= 30;
         } else if (distance <= 5) {

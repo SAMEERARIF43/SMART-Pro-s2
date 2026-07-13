@@ -40,3 +40,4 @@ Desktop.ini
 .env
 *.pem
 *.key
+*.gch
