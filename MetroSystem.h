@@ -72,8 +72,9 @@ public:
         }
     }
 
- void display() const override {
+    void display() const override {
         for (int i = 0; i < stopcount; i++) {
+            cout << stop[i] << endl;
             cout << i + 1 << ". " << stop[i] << " | Fare: Rs " << farePerstop[i] << endl;
         }
     }
@@ -331,16 +332,8 @@ public:
         }
     }
 
-   void calculatefare(int start, int end) {
-        if (start < 1 || start > 9 || end < 1 || end > 9) {
-            cout << "Invalid stop number. Please enter a stop between 1 and 9."<< endl;
-            return;
-        }
+    void calculatefare(int start, int end) {
         int distance = end - start;
-        if (distance <= 0) {
-            cout << "End stop must be after start stop." << endl;
-            return;
-        }
         if (distance <= 2) {
             money -= 30;
         } else if (distance <= 5) {
@@ -455,5 +448,13 @@ public:
         }
     }
 };
+
+inline int getTotalFleetCapacity(Vechicle* fleet[], int size) {
+    int total = 0;
+    for (int i = 0; i < size; i++) {
+        if (fleet[i]) total += fleet[i]->capacity;
+    }
+    return total;
+}
 
 #endif
