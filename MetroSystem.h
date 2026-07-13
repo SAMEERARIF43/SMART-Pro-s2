@@ -333,7 +333,7 @@ public:
 
    void calculatefare(int start, int end) {
         if (start < 1 || start > 9 || end < 1 || end > 9) {
-            cout << "Invalid stop number. Stops must be between 1 and 9." << endl;
+            cout << "Invalid stop number. Please enter a stop between 1 and 9." << endl;
             return;
         }
         int distance = end - start;
