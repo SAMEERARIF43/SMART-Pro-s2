@@ -65,6 +65,7 @@ See `docs/assignment.md` for the specific checklist used during this assignment.
 | `Person`, `Passenger`, `RegularPassenger`, `Disabled`, `VIP`, `Driver`, `RegularDriver` | People hierarchy |
 | `Route`, `Schedule`, `DriverBusSystem` | Supporting data/service classes |
 
+i will be making changes in it over time and will try to add new features and ui/ux
 ## License
 
 Personal academic project — for learning purposes.
