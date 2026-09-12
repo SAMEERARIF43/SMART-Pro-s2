@@ -68,3 +68,5 @@ See `docs/assignment.md` for the specific checklist used during this assignment.
 ## License
 
 Personal academic project — for learning purposes.
+
+USE OF AI IS GOOD NOW A DAYS IF U DONT USE AI U WILL BE LEFT BEHIND . TODAY THE MAIN THING IS NOT CODING ITS THAT U SHOULD KNOW HOW TO DO THINGS OR USE AI EFFICIENTLY . IDEAS ARE THE REAL SKILLS TODAY IN THIS ADVANCE WORLS
